@@ -3,14 +3,17 @@
 #include <locale.h>
 
 #include "map.h"
-
+#include "util.h"
+#include "rlutil.h"
 
 int main(void)
 {
     setlocale(LC_ALL, "");
-    for(int i = 0; i < 17; i++)
-    {
-        printf("%ls\n", mapLine[i]);
-    }
+    cls();
+    
+    //setColor(BLACK);
+    //setBackgroundColor(WHITE);
+    printMap();
+    resetColor();
     return 0;
 }
